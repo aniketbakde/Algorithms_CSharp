@@ -73,6 +73,22 @@ namespace Algorithms
             var root = treeBuilder.BootStrapTree5();
             var newRoot = classRef.RemoveNodes(ref root);
             treeTraversal.PreOrder(newRoot);
+            Console.WriteLine();
+
+            root = treeBuilder.BootStrapTree1();
+            newRoot = classRef.RemoveNodes(ref root);
+            treeTraversal.PreOrder(newRoot);
+            Console.WriteLine();
+
+            root = treeBuilder.BootStrapTree2();
+            newRoot = classRef.RemoveNodes(ref root);
+            treeTraversal.PreOrder(newRoot);
+            Console.WriteLine();
+
+            root = treeBuilder.BootStrapTree3();
+            newRoot = classRef.RemoveNodes(ref root);
+            treeTraversal.PreOrder(newRoot);
+            Console.WriteLine();
         }
     }
 }
