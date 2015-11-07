@@ -73,5 +73,41 @@ namespace Algorithms.MaximumPathSumInBinaryTree
                 }
             };
         }
+
+        public TreeNode<int> BootStrapTree3()
+        {
+            return new TreeNode<int>()
+            {
+                Value = -10,
+                LeftChild = new TreeNode<int>()
+                {
+                    Value = 2,
+                    LeftChild = new TreeNode<int>()
+                    {
+                        Value = 20
+                    },
+                    RightChild = new TreeNode<int>()
+                    {
+                        Value = 1
+                    }
+                },
+                RightChild = new TreeNode<int>()
+                {
+                    Value = -10,
+                    RightChild = new TreeNode<int>()
+                    {
+                        Value = 25,
+                        LeftChild = new TreeNode<int>()
+                        {
+                            Value = 3
+                        },
+                        RightChild = new TreeNode<int>()
+                        {
+                            Value = 4
+                        }
+                    }
+                }
+            };
+        }
     }
 }

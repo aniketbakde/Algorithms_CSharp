@@ -31,6 +31,11 @@ namespace Algorithms
             res = 0;
             classRefernece.FindMaxSum(root, ref res);
             Debug.WriteLine(String.Format("Max sum of one of the branch is : {0}", res));
+
+            root = classRefernece.BootStrapTree3();
+            res = 0;
+            classRefernece.FindMaxSum(root, ref res);
+            Debug.WriteLine(String.Format("Max sum of one of the branch is : {0}", res));
         }
     }
 }
