@@ -41,8 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MaximumPathSumInBinaryTree\MaxPathSumInBinaryTree.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\TreeNode.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

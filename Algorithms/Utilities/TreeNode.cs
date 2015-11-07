@@ -6,5 +6,11 @@ namespace Algorithms.Utilities
         public T Value;
         public TreeNode<T> LeftChild;
         public TreeNode<T> RightChild;
+
+        public TreeNode()
+        {
+            LeftChild = null;
+            RightChild = null;
+        } 
     }
 }
