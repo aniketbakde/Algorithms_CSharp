@@ -4,6 +4,16 @@ namespace Algorithms.Utilities
 {
     public class TreeBuilder
     {
+        
+        /*
+         *              10
+         *      /               \
+         *      2               10
+         *   /     \                \
+         * 20       1               -25
+         *                      /       \
+         *                      3       4
+        */
         public TreeNode<int> BootStrapTree1()
         {
             return new TreeNode<int>()
@@ -40,6 +50,11 @@ namespace Algorithms.Utilities
             };
         }
 
+        /*
+         *              1
+         *      /               \
+         *      2               3
+        */
         public TreeNode<int> BootStrapTree2()
         {
             return new TreeNode<int>()
@@ -56,6 +71,15 @@ namespace Algorithms.Utilities
             };
         }
 
+        /*
+         *              -10
+         *      /               \
+         *      2               -10
+         *   /     \                \
+         * 20       1               25
+         *                      /       \
+         *                      3       4
+        */
         public TreeNode<int> BootStrapTree3()
         {
             return new TreeNode<int>()
@@ -92,6 +116,15 @@ namespace Algorithms.Utilities
             };
         }
 
+        /*
+         *              1
+         *      /               \
+         *      2               3
+         *   /     \                
+         * 4       5               
+         *                      
+         *                      
+        */
         public TreeNode<int> BootStrapTree4()
         {
             return new TreeNode<int>()
