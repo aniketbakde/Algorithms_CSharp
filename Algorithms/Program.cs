@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using Algorithms.MaximumPathSumInBinaryTree;
 using Algorithms.MinimumDepthInBinaryTree;
+using Algorithms.RemoveHalfNodes;
 using Algorithms.Utilities;
 
 namespace Algorithms
@@ -11,6 +12,7 @@ namespace Algorithms
         private static void Main(string[] args)
         {
             new Driver().Drive();
+            Console.ReadLine();
         }
     }
 
@@ -19,7 +21,8 @@ namespace Algorithms
         public void Drive()
         {
             //DriveMaximumPathSumInBinaryTree();
-            DriveMinimumDepthInBinaryTree();
+            //DriveMinimumDepthInBinaryTree();
+            DriveRemoveHalfNodes();
         }
 
         private void DriveMaximumPathSumInBinaryTree()
@@ -30,35 +33,46 @@ namespace Algorithms
             var root = treeBuilder.BootStrapTree1();
             var res = 0;
             classRef.FindMaxSum(root, ref res);
-            Debug.WriteLine(String.Format("Max sum of one of the branch is : {0}", res));
+            Console.WriteLine("Max sum of one of the branch is : {0}", res);
 
             root = treeBuilder.BootStrapTree2();
             res = 0;
             classRef.FindMaxSum(root, ref res);
-            Debug.WriteLine(String.Format("Max sum of one of the branch is : {0}", res));
+            Console.WriteLine("Max sum of one of the branch is : {0}", res);
 
             root = treeBuilder.BootStrapTree3();
             res = 0;
             classRef.FindMaxSum(root, ref res);
-            Debug.WriteLine(String.Format("Max sum of one of the branch is : {0}", res));
+            Console.WriteLine("Max sum of one of the branch is : {0}", res);
         }
 
         private void DriveMinimumDepthInBinaryTree()
         {
-            var classRef = new MinDepthInBinaryTree();
+            var classRef = new MinDepthInBinaryTree<int>();
             var treeBuilder = new TreeBuilder();
 
             var root = treeBuilder.BootStrapTree4();
             var minDepth = classRef.FindMinDepth(root);
-            Debug.WriteLine(String.Format("Min depth of tree is : {0}", minDepth));
+            Console.WriteLine("Min depth of tree is : {0}", minDepth);
 
             root = treeBuilder.BootStrapTree2();
             minDepth = classRef.FindMinDepth(root);
-            Debug.WriteLine(String.Format("Min depth of tree is : {0}", minDepth));
+            Console.WriteLine("Min depth of tree is : {0}", minDepth);
 
             root = treeBuilder.BootStrapTree1();
             minDepth = classRef.FindMinDepth(root);
-            Debug.WriteLine(String.Format("Min depth of tree is : {0}", minDepth));
+            Console.WriteLine("Min depth of tree is : {0}", minDepth);
+        }
+
+        private void DriveRemoveHalfNodes()
+        {
+            var classRef = new RemHalfNodes<int>();
+            var treeBuilder = new TreeBuilder();
+            var treeTraversal = new TreeTraversal<int>();
+
+            var root = treeBuilder.BootStrapTree5();
+            var newRoot = classRef.RemoveNodes(ref root);
+            treeTraversal.PreOrder(newRoot);
         }
     }
 }

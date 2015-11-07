@@ -148,5 +148,50 @@ namespace Algorithms.Utilities
                 }
             };
         }
+
+        /*
+         *              2
+         *      /               \
+         *      7                5
+         *        \                \
+         *          6               9
+         *      /      \           /   
+         *     1        11        4       
+        */
+        public TreeNode<int> BootStrapTree5()
+        {
+            return new TreeNode<int>()
+            {
+                Value = 2,
+                LeftChild = new TreeNode<int>()
+                {
+                    Value = 7,
+                    RightChild = new TreeNode<int>()
+                    {
+                        Value = 6,
+                        LeftChild = new TreeNode<int>()
+                        {
+                            Value = 1
+                        },
+                        RightChild = new TreeNode<int>()
+                        {
+                            Value = 11
+                        }
+                    }
+                },
+                RightChild = new TreeNode<int>()
+                {
+                    Value = 5,
+                    RightChild = new TreeNode<int>()
+                    {
+                        Value = 9,
+                        LeftChild = new TreeNode<int>()
+                        {
+                            Value = 4
+                        }
+                    }
+                }
+            };
+        }
     }
 }

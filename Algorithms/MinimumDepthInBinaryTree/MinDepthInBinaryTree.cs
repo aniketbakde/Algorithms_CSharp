@@ -3,9 +3,9 @@ using Algorithms.Utilities;
 
 namespace Algorithms.MinimumDepthInBinaryTree
 {
-    public class MinDepthInBinaryTree
+    public class MinDepthInBinaryTree<T>
     {
-        public int FindMinDepth(TreeNode<int> root)
+        public int FindMinDepth(TreeNode<T> root)
         {
             if (root == null)
                 return 0;
