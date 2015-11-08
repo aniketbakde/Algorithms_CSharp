@@ -46,6 +46,8 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RemoveHalfNodes\RemHalfNodes.cs" />
+    <Compile Include="ReorderArrayForIndex\ReorderArrForIndex.cs" />
+    <Compile Include="Utilities\PrintArray.cs" />
     <Compile Include="Utilities\TreeBuilder.cs" />
     <Compile Include="Utilities\TreeNode.cs" />
     <Compile Include="Utilities\TreeTraversal.cs" />

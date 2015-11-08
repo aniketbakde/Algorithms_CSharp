@@ -1,8 +1,8 @@
 ﻿using System;
-using System.Diagnostics;
 using Algorithms.MaximumPathSumInBinaryTree;
 using Algorithms.MinimumDepthInBinaryTree;
 using Algorithms.RemoveHalfNodes;
+using Algorithms.ReorderArrayForIndex;
 using Algorithms.Utilities;
 
 namespace Algorithms
@@ -22,7 +22,8 @@ namespace Algorithms
         {
             //DriveMaximumPathSumInBinaryTree();
             //DriveMinimumDepthInBinaryTree();
-            DriveRemoveHalfNodes();
+            //DriveRemoveHalfNodes();
+            DriveReorderArrayForIndex();
         }
 
         private void DriveMaximumPathSumInBinaryTree()
@@ -88,6 +89,25 @@ namespace Algorithms
             root = treeBuilder.BootStrapTree3();
             newRoot = classRef.RemoveNodes(ref root);
             treeTraversal.PreOrder(newRoot);
+            Console.WriteLine();
+        }
+
+        private void DriveReorderArrayForIndex()
+        {
+            var classRef = new ReorderArrForIndex();
+
+            var array = new int[] {10, 11, 12};
+            var index = new int[] {1, 0, 2};
+            var n = 3;
+            classRef.Reorder(ref array, index, n);
+            new PrintArray<int>(array);
+            Console.WriteLine();
+
+            array = new int[] { 50, 40, 70, 60, 90 };
+            index = new int[] { 3, 0, 4, 1, 2 };
+            n = 3;
+            classRef.Reorder(ref array, index, n);
+            new PrintArray<int>(array);
             Console.WriteLine();
         }
     }
