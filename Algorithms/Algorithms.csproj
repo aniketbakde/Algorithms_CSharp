@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MaximumPathSumInBinaryTree\MaxPathSumInBinaryTree.cs" />
+    <Compile Include="MaxIndexArraySum\MaxIndexArrSum.cs" />
     <Compile Include="MinimumDepthInBinaryTree\MinDepthInBinaryTree.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

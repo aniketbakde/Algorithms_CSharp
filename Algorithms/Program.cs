@@ -1,5 +1,6 @@
 ﻿using System;
 using Algorithms.MaximumPathSumInBinaryTree;
+using Algorithms.MaxIndexArraySum;
 using Algorithms.MinimumDepthInBinaryTree;
 using Algorithms.RemoveHalfNodes;
 using Algorithms.ReorderArrayForIndex;
@@ -23,7 +24,8 @@ namespace Algorithms
             //DriveMaximumPathSumInBinaryTree();
             //DriveMinimumDepthInBinaryTree();
             //DriveRemoveHalfNodes();
-            DriveReorderArrayForIndex();
+            //DriveReorderArrayForIndex();
+            DriveMaxIndexArrSum();
         }
 
         private void DriveMaximumPathSumInBinaryTree()
@@ -109,6 +111,19 @@ namespace Algorithms
             classRef.Reorder(ref array, index, n);
             new PrintArray<int>(array);
             Console.WriteLine();
+        }
+
+        private void DriveMaxIndexArrSum()
+        {
+            var classRef = new MaxIndexArrSum();
+
+            var array = new int[] { 1, 20, 2, 10 };
+            var maxSum = classRef.FindMaxSum(array);
+            Console.WriteLine("Max sum is {0}", maxSum);
+
+            array = new int[] { 10, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+            maxSum = classRef.FindMaxSum(array);
+            Console.WriteLine("Max sum is {0}", maxSum);
         }
     }
 }
